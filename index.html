@@ -147,6 +147,58 @@
     margin-top:6px;
   }
 
+  /* ---------- STORY BEHIND THE SONG ---------- */
+  section.song-story{
+    max-width:840px;
+    margin:0 auto 90px;
+    padding:0 20px;
+  }
+  .song-story .section-head{ margin-bottom:32px; }
+  .story-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:22px;
+  }
+  .story-card{
+    background:var(--white);
+    border-radius:14px;
+    padding:26px 24px;
+    border:1px solid rgba(36,28,23,0.08);
+    box-shadow:0 4px 14px rgba(36,28,23,0.05);
+  }
+  .story-card .num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:30px; height:30px;
+    border-radius:50%;
+    background:var(--red);
+    color:#fff;
+    font-size:0.85rem;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .story-card:nth-child(2) .num{ background:var(--navy); }
+  .story-card:nth-child(3) .num{ background:var(--gold); }
+  .story-card:nth-child(4) .num{ background:var(--muted); }
+  .story-card h3{
+    font-size:1.05rem;
+    color:var(--navy);
+    margin-bottom:10px;
+  }
+  .story-card p{
+    color:#3a2f28;
+    font-size:0.92rem;
+    line-height:1.65;
+    margin:0;
+  }
+  .story-card.highlight{
+    grid-column:1 / -1;
+    background:linear-gradient(135deg, #fdf3ec, #fbe8e2);
+    border-left:4px solid var(--red);
+  }
+  .story-card.highlight h3{ color:var(--red-deep); }
+
   /* ---------- SIGNATURE SONGS ---------- */
   section.deep-dive{
     max-width:1040px;
@@ -383,6 +435,39 @@
     <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/0M7mWKqwTIaVjYyxfZmtTa?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 </div>
+
+<section class="song-story">
+  <div class="section-head">
+    <h2>The Story Behind the Song</h2>
+    <p>Why "Courtesy of the Red, White and Blue" hits harder than any other track.</p>
+  </div>
+  <div class="story-grid">
+    <div class="story-card">
+      <span class="num">1</span>
+      <h3>Written in 20 Minutes</h3>
+      <p>Keith wrote the lyrics on the back of a fantasy football sheet in late 2001, under the working title "The Angry American." It came together in about twenty minutes — a rare case of a song arriving almost fully formed.</p>
+    </div>
+    <div class="story-card">
+      <span class="num">2</span>
+      <h3>A Tribute to His Father</h3>
+      <p>The song was inspired by Keith's father, Hubert "H.K." Covel Jr., an Army veteran who lost an eye while serving in the Korean War and flew the flag in their yard every day. His father died in a car accident in March 2001 — six months before 9/11. Keith wrote the song imagining his father's reaction to the attacks.</p>
+    </div>
+    <div class="story-card">
+      <span class="num">3</span>
+      <h3>A No. 1 Hit — and a Firestorm</h3>
+      <p>Released in May 2002 as the lead single from <em>Unleashed</em>, it hit No. 1 on the Hot Country Songs chart that Fourth of July. Its unapologetic tone also made it one of the most controversial country songs of its era — The Chicks' Natalie Maines publicly criticized it, sparking a very public feud with Keith.</p>
+    </div>
+    <div class="story-card">
+      <span class="num">4</span>
+      <h3>Still Climbing, 24 Years Later</h3>
+      <p>Around America's 250th birthday in July 2026, the song saw a massive resurgence — topping Spotify's charts for the Fourth of July and climbing to No. 11 on the Billboard Hot 100, the highest chart position any Toby Keith song has ever reached, more than two decades after it first came out.</p>
+    </div>
+    <div class="story-card highlight">
+      <h3>Why It's My Favorite</h3>
+      <p>It's proud, it's defiant, and it means something. Every time it comes on, it's the loudest sing-along of any road trip — and knowing the real story behind it, the tribute to Keith's father and the moment it came out of, only makes it hit harder.</p>
+    </div>
+  </div>
+</section>
 
 <section class="artists">
   <div class="section-head">
