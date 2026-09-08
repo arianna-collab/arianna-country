@@ -23,10 +23,29 @@
   html,body{margin:0;padding:0;}
   body{
     font-family:'Inter', system-ui, -apple-system, sans-serif;
-    background:var(--cream);
+    background:
+      radial-gradient(circle at 8% 6%, rgba(169,36,51,0.14), transparent 30%),
+      radial-gradient(circle at 92% 10%, rgba(31,44,71,0.14), transparent 32%),
+      radial-gradient(circle at 12% 60%, rgba(201,154,74,0.16), transparent 28%),
+      radial-gradient(circle at 90% 55%, rgba(169,36,51,0.10), transparent 28%),
+      radial-gradient(circle at 20% 95%, rgba(31,44,71,0.12), transparent 30%),
+      radial-gradient(circle at 85% 92%, rgba(201,154,74,0.14), transparent 30%),
+      var(--cream);
+    background-attachment:fixed;
     color:var(--ink);
     overflow-x:hidden;
+    position:relative;
   }
+  body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:radial-gradient(rgba(31,44,71,0.07) 1.4px, transparent 1.4px);
+    background-size:28px 28px;
+    pointer-events:none;
+    z-index:0;
+  }
+  body > *{ position:relative; z-index:1; }
   a{color:inherit;}
   h1,h2,h3{
     font-family:'Fraunces', Georgia, serif;
@@ -94,6 +113,11 @@
     background:repeating-linear-gradient(90deg, var(--red) 0 40px, var(--cream) 40px 46px, var(--red) 46px 86px, var(--cream) 86px 92px);
     border-radius:6px;
     margin-bottom:0;
+  }
+  .flag-stripe.divider{
+    max-width:200px;
+    margin:0 auto 56px;
+    opacity:0.7;
   }
   .spotlight-card{
     background:var(--navy);
@@ -349,7 +373,16 @@
   .section-head h2{
     font-size:clamp(1.6rem, 3.6vw, 2.2rem);
     color:var(--navy);
-    margin-bottom:10px;
+    margin-bottom:14px;
+  }
+  .section-head h2:after{
+    content:"";
+    display:block;
+    width:56px;
+    height:4px;
+    margin:14px auto 0;
+    border-radius:4px;
+    background:linear-gradient(90deg, var(--red), var(--gold));
   }
   .section-head p{
     color:var(--muted);
@@ -440,7 +473,7 @@
 </div>
 
 <div class="spotlight">
-  <div class="flag-stripe"></div>
+  <div class="flag-stripe divider"></div>
   <div class="spotlight-card">
     <span class="spotlight-label">All-Time Favorite Song</span>
     <h2>"Courtesy of the Red, White and Blue"</h2>
@@ -483,6 +516,7 @@
   </div>
 </section>
 
+<div class="flag-stripe divider"></div>
 <section class="artists">
   <div class="section-head">
     <h2>On Repeat</h2>
@@ -524,6 +558,7 @@
   </div>
 </section>
 
+<div class="flag-stripe divider"></div>
 <section class="deep-dive">
   <div class="section-head">
     <h2>Signature Songs</h2>
@@ -611,6 +646,7 @@
   </div>
 </section>
 
+<div class="flag-stripe divider"></div>
 <section class="bios">
   <div class="section-head">
     <h2>About the Artists</h2>
@@ -691,6 +727,7 @@
   </div>
 </section>
 
+<div class="flag-stripe divider"></div>
 <section class="bios">
   <div class="section-head">
     <h2>On Tour</h2>
