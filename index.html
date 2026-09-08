@@ -192,6 +192,84 @@
     margin:12px 0 0;
   }
 
+  /* ---------- ABOUT THE ARTISTS ---------- */
+  section.bios{
+    max-width:840px;
+    margin:0 auto;
+    padding:0 20px 100px;
+  }
+  .bio-card{
+    background:var(--white);
+    border-radius:16px;
+    padding:34px 36px;
+    margin-bottom:28px;
+    border:1px solid rgba(36,28,23,0.08);
+    box-shadow:0 6px 20px rgba(36,28,23,0.06);
+    border-left:5px solid var(--red);
+  }
+  .bio-card.navy{ border-left-color:var(--navy); }
+  .bio-card.gold{ border-left-color:var(--gold); }
+  .bio-card.muted{ border-left-color:var(--muted); }
+  .bio-card:last-child{ margin-bottom:0; }
+  .bio-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:6px;
+  }
+  .bio-head h3{
+    font-size:1.4rem;
+    color:var(--navy);
+  }
+  .bio-head .years{
+    font-size:0.85rem;
+    color:var(--muted);
+    font-weight:500;
+  }
+  .bio-origin{
+    font-size:0.85rem;
+    color:var(--red);
+    font-weight:600;
+    margin-bottom:16px;
+  }
+  .bio-card p.text{
+    color:#3a2f28;
+    line-height:1.75;
+    font-size:0.98rem;
+    margin:0 0 18px;
+  }
+  .bio-card h4{
+    font-family:'Inter', sans-serif;
+    font-size:0.78rem;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 12px;
+    font-weight:600;
+  }
+  .bio-card ul{
+    margin:0;
+    padding-left:20px;
+    color:#3a2f28;
+  }
+  .bio-card ul li{
+    margin-bottom:8px;
+    line-height:1.6;
+    font-size:0.94rem;
+  }
+  .bio-card .tribute{
+    margin-top:20px;
+    padding:16px 18px;
+    background:#faf4f2;
+    border-radius:10px;
+    font-size:0.9rem;
+    color:#5c4d43;
+    line-height:1.65;
+    font-style:italic;
+  }
+
   /* ---------- ARTISTS ---------- */
   section.artists{
     max-width:1040px;
@@ -431,6 +509,86 @@
         <p>"Human" — the title track from Human: The Double Album, a fan favorite.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="bios">
+  <div class="section-head">
+    <h2>About the Artists</h2>
+    <p>The careers behind the songs on repeat.</p>
+  </div>
+
+  <div class="bio-card">
+    <div class="bio-head">
+      <h3>Zach Bryan</h3>
+      <span class="years">b. 1996</span>
+    </div>
+    <p class="bio-origin">Oologah, Oklahoma</p>
+    <p class="text">Before he was a chart-topping songwriter, Bryan spent eight years as an active-duty member of the U.S. Navy, writing and recording songs in his off-hours. He self-released his debut album, <em>DeAnn</em>, in 2019, and broke through nationally with the 2022 triple album <em>American Heartbreak</em>.</p>
+    <h4>Career Highlights</h4>
+    <ul>
+      <li>Named ACM New Male Artist of the Year (2022)</li>
+      <li>His self-titled 2023 album debuted at No. 1 on the Billboard 200</li>
+      <li>Won the 2024 Grammy for Best Country Duo/Group Performance for "I Remember Everything" (feat. Kacey Musgraves), which also topped the Hot 100</li>
+      <li>Set the record for the largest ticketed concert in U.S. history — 112,408 fans at Michigan Stadium (September 2025)</li>
+      <li>Sixth album, <em>With Heaven on Top</em>, debuted at No. 1 in January 2026</li>
+      <li>Over 30 million records sold</li>
+    </ul>
+  </div>
+
+  <div class="bio-card navy">
+    <div class="bio-head">
+      <h3>Morgan Wallen</h3>
+      <span class="years">b. 1993</span>
+    </div>
+    <p class="bio-origin">Sneedville, Tennessee</p>
+    <p class="text">Wallen first gained national attention as a contestant on Season 6 of <em>The Voice</em> in 2014. His debut album, <em>If I Know Me</em> (2018), introduced "Whiskey Glasses," but it was 2021's <em>Dangerous: The Double Album</em> that made him one of the biggest names in country music.</p>
+    <h4>Career Highlights</h4>
+    <ul>
+      <li><em>One Thing at a Time</em> (2023) produced "Last Night," his first Billboard Hot 100 No. 1</li>
+      <li>At one point held five of the top 10 spots on the Hot 100 simultaneously — a feat matched by only a handful of artists, including Taylor Swift and The Beatles</li>
+      <li>Won CMA Entertainer of the Year (2024)</li>
+      <li>Earned his first Grammy nominations in 2025 for "I Had Some Help"</li>
+      <li><em>I'm the Problem</em> (2025) was his third consecutive chart-topping album</li>
+      <li>The highest RIAA-certified country artist in history, with over 265 million certified units</li>
+    </ul>
+  </div>
+
+  <div class="bio-card gold">
+    <div class="bio-head">
+      <h3>Toby Keith</h3>
+      <span class="years">1961 – 2024</span>
+    </div>
+    <p class="bio-origin">Clinton, Oklahoma</p>
+    <p class="text">Before music, Keith worked in the Oklahoma oil fields and played defensive end in the USFL. His self-titled 1994 debut went platinum, but it was 2002's <em>Unleashed</em> — home to "Courtesy of the Red, White and Blue," which he wrote in twenty minutes after 9/11 — that cemented his superstardom.</p>
+    <h4>Career Highlights</h4>
+    <ul>
+      <li>33 No. 1 hits and 42 top-10 hits across his career</li>
+      <li>More than 40 million albums sold, and over 10 billion career streams</li>
+      <li>Two-time ACM Entertainer of the Year (2002, 2003); 14-time ACM Award winner overall</li>
+      <li>Inducted into the Songwriters Hall of Fame (2015)</li>
+      <li>Received the National Medal of Arts (2021) and the BMI Icon Award (2022)</li>
+      <li>Posthumously inducted into the Country Music Hall of Fame (2024)</li>
+    </ul>
+    <p class="tribute">Toby Keith passed away in February 2024 after a two-year battle with stomach cancer. He was known off-stage for his USO tours entertaining U.S. troops overseas and his annual golf classic, which funded his charitable foundation — a legacy as generous as it was loud.</p>
+  </div>
+
+  <div class="bio-card muted">
+    <div class="bio-head">
+      <h3>Cody Johnson</h3>
+      <span class="years">b. 1987</span>
+    </div>
+    <p class="bio-origin">Sebastopol, Texas</p>
+    <p class="text">Johnson built his career the hard way, independently releasing six albums — rooted in Texas rodeo and cowboy culture — before signing with Warner Music Nashville in 2018. That grassroots foundation is part of why his traditional country sound has connected so widely.</p>
+    <h4>Career Highlights</h4>
+    <ul>
+      <li>"'Til You Can't" (2021) earned his first Grammy Award (Best Country Song) and first Country radio No. 1</li>
+      <li>Album <em>Leather</em> won CMA Album of the Year; "'Til You Can't" won CMA Single of the Year and Music Video of the Year</li>
+      <li>Won CMA Male Vocalist of the Year and the ACM Song of the Year (for "Dirt Cheap") in 2025</li>
+      <li>Won ACM Entertainer of the Year and Male Artist of the Year in May 2026</li>
+      <li>Set a concert attendance record at Houston's NRG Stadium — 80,000+ fans (March 2026)</li>
+      <li>Released <em>Banks of the Trinity</em> in June 2026, featuring Luke Combs and Brothers Osborne</li>
+    </ul>
   </div>
 </section>
 
