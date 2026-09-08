@@ -142,21 +142,10 @@
     color:#e7ddca;
     font-size:1rem;
   }
-  .listen-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:var(--red);
-    color:#fff;
-    text-decoration:none;
-    padding:13px 28px;
-    border-radius:999px;
-    font-weight:600;
-    font-size:0.95rem;
-    box-shadow:0 8px 20px rgba(169,36,51,0.35);
-    transition:transform .2s ease;
+  .spotify-embed{
+    border-radius:12px;
+    margin-top:6px;
   }
-  .listen-btn:hover{ transform:translateY(-3px); }
 
   /* ---------- ARTISTS ---------- */
   section.artists{
@@ -197,18 +186,6 @@
     transform:translateY(-5px);
     box-shadow:0 14px 30px rgba(36,28,23,0.12);
   }
-  .artist-card .banner{
-    height:88px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:2.2rem;
-    color:#fff;
-  }
-  .artist-card .banner.b1{ background:linear-gradient(135deg, var(--red), var(--red-deep)); }
-  .artist-card .banner.b2{ background:linear-gradient(135deg, var(--navy), var(--navy-deep)); }
-  .artist-card .banner.b3{ background:linear-gradient(135deg, var(--gold), #a97a2e); }
-  .artist-card .banner.b4{ background:linear-gradient(135deg, #6b5f52, #453d34); }
   .artist-card .body{
     padding:22px 22px 24px;
     flex:1;
@@ -236,17 +213,6 @@
     margin:0 0 18px;
     flex:1;
   }
-  .artist-card a.listen{
-    text-decoration:none;
-    font-size:0.86rem;
-    font-weight:600;
-    color:var(--red);
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-  }
-  .artist-card a.listen:hover{ text-decoration:underline; }
-
   /* ---------- FOOTER ---------- */
   footer{
     background:var(--navy-deep);
@@ -291,7 +257,7 @@
     <h2>"Courtesy of the Red, White and Blue"</h2>
     <p class="artist">Toby Keith</p>
     <p class="blurb">If I had to pick one song, it's this one — no contest. Proud, defiant, and unmistakably American, it's the song that gets played loudest on every road trip and never gets old.</p>
-    <a class="listen-btn" href="https://www.youtube.com/results?search_query=Toby+Keith+Courtesy+of+the+Red+White+and+Blue" target="_blank" rel="noopener">▶ Listen on YouTube</a>
+    <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/0M7mWKqwTIaVjYyxfZmtTa?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 </div>
 
@@ -302,39 +268,35 @@
   </div>
   <div class="artist-grid">
     <div class="artist-card">
-      <div class="banner b1">🎸</div>
       <div class="body">
         <span class="badge">Top Favorite</span>
         <h3>Zach Bryan</h3>
         <p>Raw, poetic, and unmistakably him — his music (and his band behind him) feels like every road trip I've ever taken.</p>
-        <a class="listen" href="https://www.youtube.com/results?search_query=Zach+Bryan" target="_blank" rel="noopener">▶ Listen on YouTube</a>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/40ZNYROS4zLfyyBSs2PGe2?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
     <div class="artist-card">
-      <div class="banner b2">🎤</div>
       <div class="body">
         <span class="badge">In the Rotation</span>
         <h3>Morgan Wallen</h3>
         <p>Chart-topping hooks with just the right amount of grit — impossible not to sing along.</p>
-        <a class="listen" href="https://www.youtube.com/results?search_query=Morgan+Wallen" target="_blank" rel="noopener">▶ Listen on YouTube</a>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/4oUHIQIBe0LHzYfvXNW4QM?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
     <div class="artist-card">
-      <div class="banner b3">🤠</div>
       <div class="body">
         <span class="badge">The Legend</span>
         <h3>Toby Keith</h3>
         <p>A country icon — and the artist behind my favorite song of all time, featured above.</p>
-        <a class="listen" href="https://www.youtube.com/results?search_query=Toby+Keith" target="_blank" rel="noopener">▶ Listen on YouTube</a>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/2bA6fzP0lMAQ4kz6CF61w8?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
     <div class="artist-card">
-      <div class="banner b4">🎶</div>
       <div class="body">
         <span class="badge">Traditional Roots</span>
         <h3>Cody Johnson</h3>
         <p>Traditional country with real heart behind every note — the kind of voice that sounds like it means it.</p>
-        <a class="listen" href="https://www.youtube.com/results?search_query=Cody+Johnson" target="_blank" rel="noopener">▶ Listen on YouTube</a>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/6zLBxLdl60ekBLpawtT63I?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -344,7 +306,7 @@
   <h3>Arianna Kedersha</h3>
   <p>Country music, always on.</p>
   <p class="credits">
-    Artist names and song titles are the property of their respective owners/labels. No copyrighted photos are used on this page — listen links go directly to YouTube search results for each artist or song.
+    Artist and song information, including album art, is displayed via official embedded Spotify players — © their respective artists and labels.
   </p>
 </footer>
 
