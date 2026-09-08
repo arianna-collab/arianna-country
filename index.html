@@ -24,11 +24,14 @@
   body{
     font-family:'Inter', system-ui, -apple-system, sans-serif;
     background:
-      linear-gradient(rgba(242,230,207,0.93), rgba(242,230,207,0.93)),
+      radial-gradient(circle at 15% 10%, rgba(154,51,36,0.28), transparent 40%),
+      radial-gradient(circle at 85% 20%, rgba(184,134,59,0.22), transparent 42%),
+      radial-gradient(circle at 25% 90%, rgba(154,51,36,0.22), transparent 42%),
+      linear-gradient(rgba(20,14,9,0.86), rgba(20,14,9,0.86)),
       url('images/wood-texture.jpg');
-    background-size:auto, 480px 480px;
-    background-repeat:repeat, repeat;
-    background-attachment:fixed, fixed;
+    background-size:auto, auto, auto, auto, 480px 480px;
+    background-repeat:no-repeat, no-repeat, no-repeat, repeat, repeat;
+    background-attachment:fixed, fixed, fixed, fixed, fixed;
     color:var(--ink);
     overflow-x:hidden;
     position:relative;
@@ -92,7 +95,7 @@
     font-style:italic;
     font-size:clamp(1rem, 2vw, 1.2rem);
     line-height:1.8;
-    color:var(--muted);
+    color:#d9c9ac;
     margin:0;
   }
 
@@ -206,7 +209,12 @@
     padding:26px 24px;
     border:1px solid rgba(36,28,23,0.08);
     box-shadow:0 4px 14px rgba(36,28,23,0.05);
+    transition:transform .2s ease, box-shadow .2s ease;
   }
+  .story-card:nth-child(odd){ transform:rotate(-0.6deg); }
+  .story-card:nth-child(even){ transform:rotate(0.6deg); }
+  .story-card:hover{ transform:translateY(-4px) rotate(0deg); box-shadow:0 12px 26px rgba(36,28,23,0.1); }
+  .story-card.highlight{ transform:none; }
   .story-card .num{
     display:inline-flex;
     align-items:center;
@@ -255,16 +263,17 @@
     align-items:baseline;
     gap:12px;
     margin-bottom:20px;
-    border-bottom:1px solid rgba(36,28,23,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.15);
     padding-bottom:12px;
   }
   .artist-block-head h3{
     font-size:1.3rem;
-    color:var(--navy);
+    color:#fffaf0;
   }
   .artist-block-head span{
     font-size:0.85rem;
-    color:var(--muted);
+    color:#c9a876;
+    font-weight:600;
   }
   .song-grid{
     display:grid;
@@ -277,7 +286,11 @@
     padding:18px;
     border:1px solid rgba(36,28,23,0.08);
     box-shadow:0 4px 14px rgba(36,28,23,0.05);
+    transition:transform .2s ease, box-shadow .2s ease;
   }
+  .song-card:nth-child(odd){ transform:rotate(-0.5deg); }
+  .song-card:nth-child(even){ transform:rotate(0.5deg); }
+  .song-card:hover{ transform:translateY(-4px) rotate(0deg); box-shadow:0 12px 26px rgba(36,28,23,0.1); }
   .song-card p{
     color:var(--muted);
     font-size:0.88rem;
@@ -402,22 +415,23 @@
     margin-bottom:44px;
   }
   .section-head h2{
-    font-size:clamp(1.6rem, 3.6vw, 2.2rem);
-    color:var(--navy);
+    font-size:clamp(1.7rem, 3.8vw, 2.4rem);
+    color:#fffaf0;
     margin-bottom:14px;
+    text-shadow:0 2px 10px rgba(0,0,0,0.3);
   }
   .section-head h2:after{
     content:"";
     display:block;
-    width:56px;
+    width:64px;
     height:4px;
     margin:14px auto 0;
     border-radius:4px;
-    background:linear-gradient(90deg, var(--red), var(--gold));
+    background:linear-gradient(90deg, #d1633f, var(--gold));
   }
   .section-head p{
-    color:var(--muted);
-    font-size:1rem;
+    color:#d9c9ac;
+    font-size:1.02rem;
   }
   .artist-grid{
     display:grid;
@@ -435,9 +449,11 @@
     display:flex;
     flex-direction:column;
   }
+  .artist-card:nth-child(odd){ transform:rotate(-0.7deg); }
+  .artist-card:nth-child(even){ transform:rotate(0.7deg); }
   .artist-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 14px 30px rgba(36,28,23,0.12);
+    transform:translateY(-5px) rotate(0deg);
+    box-shadow:0 14px 30px rgba(36,28,23,0.16);
   }
   .artist-card .body{
     padding:22px 22px 24px;
@@ -596,6 +612,14 @@
         <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/6yJCxee7QumYr820xdIsjo?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </div>
+    <div class="artist-card">
+      <div class="body">
+        <span class="badge">Honky-Tonk Roots</span>
+        <h3>Jon Pardi</h3>
+        <p>Real honky-tonk, real fiddle and steel guitar — traditional country that still fills arenas.</p>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/4MoAOfV4ROWofLG3a3hhBN?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -706,6 +730,27 @@
       </div>
     </div>
   </div>
+
+  <div class="artist-block">
+    <div class="artist-block-head">
+      <h3>Jon Pardi</h3>
+      <span>Honky-Tonk Roots</span>
+    </div>
+    <div class="song-grid">
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/4ly1QBXEwYoDmje9rmEgC4?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Head Over Boots" — his first No. 1, from California Sunrise (2016).</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/7f08qp3HROTkfrtNpiYGGo?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Dirt on My Boots" — his second Country Airplay No. 1, with over half a billion streams.</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/5qdQPrWmZv8xYhMJCDrdHF?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Heartache Medication" — the title track and lead single from his 2019 album.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="photo-banner">
@@ -811,6 +856,23 @@
       <li>Received the inaugural Veterans Voice Award at the 2025 American Music Awards for his support of the military community</li>
     </ul>
   </div>
+
+  <div class="bio-card navy">
+    <div class="bio-head">
+      <h3>Jon Pardi</h3>
+      <span class="years">b. 1985</span>
+    </div>
+    <p class="bio-origin">Dixon, California</p>
+    <p class="text">Pardi moved to Nashville in 2008 and worked as a lifeguard while chasing a publishing deal — he landed one 18 months later, then signed with Capitol Records Nashville. His sound stayed rooted in traditional honky-tonk even as he became one of country's biggest headliners.</p>
+    <h4>Career Highlights</h4>
+    <ul>
+      <li>Won the CMA New Artist of the Year and ACM New Male Vocalist of the Year, both in 2017</li>
+      <li>"Head Over Boots," "Dirt on My Boots," "Heartache Medication," and "Last Night Lonely" all topped the Billboard Country Airplay chart</li>
+      <li><em>California Sunrise</em> (2016) went platinum</li>
+      <li><em>Mr. Saturday Night</em> was nominated for ACM Album of the Year (2023)</li>
+      <li>Inducted into the Grand Ole Opry in 2023 — its first member from California</li>
+    </ul>
+  </div>
 </section>
 
 <div class="flag-stripe divider"></div>
@@ -913,6 +975,22 @@
       <span>Red Rocks, CO</span>
     </div>
   </div>
+
+  <div class="bio-card navy">
+    <div class="bio-head">
+      <h3>Jon Pardi</h3>
+      <span class="years">Gamblin' Man Tour</span>
+    </div>
+    <p class="bio-origin">19 arenas & amphitheaters · Sept – Nov 2026</p>
+    <p class="text">Kicks off September 17 in Richmond and runs through November 14, with Alexandra Kay and Sadie Bass joining as support across markets like Atlantic City, Laredo, and Cedar Rapids.</p>
+    <h4>Notable Stops</h4>
+    <div class="city-pills">
+      <span>Richmond, VA</span>
+      <span>Atlantic City, NJ</span>
+      <span>Laredo, TX</span>
+      <span>Cedar Rapids, IA</span>
+    </div>
+  </div>
 </section>
 
 <div class="flag-stripe divider"></div>
@@ -941,6 +1019,16 @@
       <p class="song-artist">Jason Aldean</p>
       <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/7bQKR4QQCIlX0RoHlaKiIn?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       <p>"When She Says Baby" — from his 2012 album <em>Night Train</em>, a slow-burning favorite.</p>
+    </div>
+    <div class="song-card">
+      <p class="song-artist">Luke Bryan</p>
+      <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/5eVO5USUe3N7v4xuq5XWoG?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p>"Kiss Tomorrow Goodbye" — from his 2011 album <em>Tailgates &amp; Tanlines</em>.</p>
+    </div>
+    <div class="song-card">
+      <p class="song-artist">The Chicks</p>
+      <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/0a8TgCFvvnCvazdJCrTmH9?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p>"Cowboy Take Me Away" — a No. 1 hit from 1999's <em>Fly</em>, a classic for a reason.</p>
     </div>
   </div>
 </section>
