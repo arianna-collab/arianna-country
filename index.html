@@ -147,6 +147,51 @@
     margin-top:6px;
   }
 
+  /* ---------- SIGNATURE SONGS ---------- */
+  section.deep-dive{
+    max-width:1040px;
+    margin:0 auto;
+    padding:0 20px 100px;
+  }
+  .artist-block{
+    margin-bottom:56px;
+  }
+  .artist-block:last-child{ margin-bottom:0; }
+  .artist-block-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:20px;
+    border-bottom:1px solid rgba(36,28,23,0.1);
+    padding-bottom:12px;
+  }
+  .artist-block-head h3{
+    font-size:1.3rem;
+    color:var(--navy);
+  }
+  .artist-block-head span{
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+  .song-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:22px;
+  }
+  .song-card{
+    background:var(--white);
+    border-radius:14px;
+    padding:18px;
+    border:1px solid rgba(36,28,23,0.08);
+    box-shadow:0 4px 14px rgba(36,28,23,0.05);
+  }
+  .song-card p{
+    color:var(--muted);
+    font-size:0.88rem;
+    line-height:1.55;
+    margin:12px 0 0;
+  }
+
   /* ---------- ARTISTS ---------- */
   section.artists{
     max-width:1040px;
@@ -297,6 +342,93 @@
         <h3>Cody Johnson</h3>
         <p>Traditional country with real heart behind every note — the kind of voice that sounds like it means it.</p>
         <iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/6zLBxLdl60ekBLpawtT63I?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="deep-dive">
+  <div class="section-head">
+    <h2>Signature Songs</h2>
+    <p>A few standout tracks from each artist, worth a closer listen.</p>
+  </div>
+
+  <div class="artist-block">
+    <div class="artist-block-head">
+      <h3>Zach Bryan</h3>
+      <span>Top Favorite</span>
+    </div>
+    <div class="song-grid">
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/0yxZPD1VcPh0FrX40Wocu0?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"I Remember Everything" (feat. Kacey Musgraves) — his first Billboard Hot 100 #1, and a 2024 Grammy winner for Best Country Duo/Group Performance.</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/4AgrlYXdYYkolXMvBxW0NI?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Something in the Orange" — one of his most iconic tracks, past a billion streams on Spotify.</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/3uCjCQMg8eZ3JUJ4t52Gwz?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Revival" — the closing track from Elisabeth that's become his signature concert encore.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="artist-block">
+    <div class="artist-block-head">
+      <h3>Morgan Wallen</h3>
+      <span>In the Rotation</span>
+    </div>
+    <div class="song-grid">
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/2Yjy18mT1Tjfrut6sMV0zy?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Last Night" — his first #1 on the Billboard Hot 100, from One Thing at a Time (2023).</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/2n5F9zCJVQHudkpgC43jjO?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Whiskey Glasses" — the breakout single that put him on the map, from If I Know Me (2018).</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/1TxZpKp88K898Vlkjh0yIy?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Sand In My Boots" — a Country Airplay #1 from Dangerous: The Double Album.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="artist-block">
+    <div class="artist-block-head">
+      <h3>Toby Keith</h3>
+      <span>The Legend</span>
+    </div>
+    <div class="song-grid">
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/18BajNiyvH6GpYshB0unrm?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Should've Been a Cowboy" — his 1993 debut single, later named the most-played country song of the 1990s.</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/4YKAOXyqkKZ5gOZR0AmVMN?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Red Solo Cup" — the tongue-in-cheek party anthem from Clancy's Tavern (2011).</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/0M7mWKqwTIaVjYyxfZmtTa?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Courtesy of the Red, White and Blue" — my all-time favorite song, featured up top.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="artist-block">
+    <div class="artist-block-head">
+      <h3>Cody Johnson</h3>
+      <span>Traditional Roots</span>
+    </div>
+    <div class="song-grid">
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/13rC4iKtfQocWIfzPOJxaT?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"'Til You Can't" — his first Grammy Award (Best Country Song) and first Country radio #1.</p>
+      </div>
+      <div class="song-card">
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/7oLiariUDWAEW1SXIMJB0P?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>"Human" — the title track from Human: The Double Album, a fan favorite.</p>
       </div>
     </div>
   </div>
